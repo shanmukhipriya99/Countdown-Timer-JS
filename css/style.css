@@ -8,4 +8,18 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
+  font-size: x-large;
+}
+
+.timer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    font-weight: 600;
+}
+
+.text {
+    margin: 10%;
+    text-align: center;
 }
