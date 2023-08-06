@@ -12,12 +12,13 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  /* height: 100vh; */
   margin: 0;
 }
 
 h1 {
   font-size: 55px;
+  margin-top: 50px;
 }
 
 .timer-container {
@@ -86,4 +87,28 @@ h1 {
 .input-container button:hover {
   background-color: #4b8067;
   color: #fff;
+}
+
+@media screen and (max-width: 1110px) {
+  .timer-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 60px;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .timer-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0 20px;
+  }
 }
