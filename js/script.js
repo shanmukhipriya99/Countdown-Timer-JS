@@ -2,6 +2,10 @@ let countdownInterval;
 
 document.getElementById('start-btn').addEventListener('click', () => {
   document.getElementsByTagName('h1')[0].innerHTML = '<h1>Countdown Timer</h1>';
+  document.querySelector('.days').innerHTML = 0;
+  document.querySelector('.hours').innerHTML = 0;
+  document.querySelector('.minutes').innerHTML = 0;
+  document.querySelector('.seconds').innerHTML = 0;
   clearInterval(countdownInterval);
   if (isNaN(new Date(document.getElementById('datetime').value).getTime())) {
     alert('Invalid date and time. Please enter a valid date and time.');
