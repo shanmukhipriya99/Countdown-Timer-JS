@@ -1,16 +1,21 @@
+let countdownInterval;
+
 document.getElementById('start-btn').addEventListener('click', () => {
-  let inputTime = new Date(document.getElementById('datetime').value).getTime();
-  let currentTime = new Date().getTime();
-  let diffTime = inputTime - currentTime;
-  if (diffTime < 0) {
-    alert('Please enter a future time!');
-    return;
-  }
-  startCountdown(inputTime, currentTime, diffTime);
+  clearInterval(countdownInterval);
+  startCountdown();
+  countdownInterval = setInterval(() => {
+    startCountdown();
+  }, 1000);
 });
 
-function startCountdown(inputTime, currentTime, diffTime) {
+function startCountdown() {
+  const inputTime = new Date(
+    document.getElementById('datetime').value
+  ).getTime();
+  const currentTime = new Date().getTime();
+  const diffTime = inputTime - currentTime;
   if (diffTime < 0) {
+    clearInterval(countdownInterval);
     alert('Countdown Completed!');
     return;
   }
