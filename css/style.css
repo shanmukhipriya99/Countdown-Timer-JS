@@ -9,7 +9,7 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  font-size: x-large;
+  font-size: 15px;
 }
 
 .timer-container {

@@ -16,7 +16,8 @@ function startCountdown() {
   const diffTime = inputTime - currentTime;
   if (diffTime < 0) {
     clearInterval(countdownInterval);
-    alert('Countdown Completed!');
+    document.getElementsByTagName('h1')[0].innerHTML =
+      '<h1>Countdown Completed!🎉</h1>';
     return;
   }
   let days = Math.floor(diffTime / (1000 * 60 * 60 * 24));
