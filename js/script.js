@@ -27,6 +27,10 @@ function startCountdown() {
     clearInterval(countdownInterval);
     document.getElementsByTagName('h1')[0].innerHTML =
       '<h1>Countdown Completed!🎉</h1>';
+    document.querySelector('.days').innerHTML = 0;
+    document.querySelector('.hours').innerHTML = 0;
+    document.querySelector('.minutes').innerHTML = 0;
+    document.querySelector('.seconds').innerHTML = 0;
     return;
   }
   let days = Math.floor(diffTime / (1000 * 60 * 60 * 24));
