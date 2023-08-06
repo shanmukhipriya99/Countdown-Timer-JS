@@ -18,8 +18,8 @@ function startCountdown(inputTime, currentTime, diffTime) {
   let hours = Math.floor((diffTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   let minutes = Math.floor((diffTime % (1000 * 60 * 60)) / (1000 * 60));
   let seconds = Math.floor((diffTime % (1000 * 60)) / 1000);
-  document.querySelector('.text.days').innerText = days;
-  document.querySelector('.hours').innerText = hours;
-  document.querySelector('.minutes').innerText = minutes;
-  document.querySelector('.seconds').innerText = seconds;
+  document.querySelector('.days').innerHTML = days;
+  document.querySelector('.hours').innerHTML = hours;
+  document.querySelector('.minutes').innerHTML = minutes;
+  document.querySelector('.seconds').innerHTML = seconds;
 }
